@@ -43,7 +43,7 @@ ra = catalog_data['RA']
 dec = catalog_data['DEC']
 stokes_i_flux = catalog_data['Total_flux']
 
-# Convert the catalog RA/DEC to pixel coordinates using W
+# Convert the catalog RA/DEC to pixel coordinates using WCS
 sky_coords = SkyCoord(ra=ra*u.degree, dec=dec*u.degree)
 x_positions, y_positions = wcs.world_to_pixel(sky_coords)
 
